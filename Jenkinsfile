@@ -7,6 +7,9 @@ pipeline {
       }
     }
     stage('Build') {
+      environment {
+        mvnHome = 'tool \'maven jenkins\''
+      }
       steps {
         sh 'sh "\'${mvnHome}/bin/mvn\' -Dmaven.test.failure.ignore clean package"'
       }
