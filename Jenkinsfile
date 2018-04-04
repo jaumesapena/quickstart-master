@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        build 'quickstart-master'
+        bat 'bat(/"${mvnHome}\\bin\\mvn" -Dmaven.test.failure.ignore clean package/)'
       }
     }
     stage('Deploy') {
