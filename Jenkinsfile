@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'sh "\'${mvnHome}/bin/mvn\' -Dmaven.test.failure.ignore clean package"'
+        build 'quickstart-master'
       }
     }
     stage('Deploy') {
