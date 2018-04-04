@@ -17,4 +17,7 @@ pipeline {
       }
     }
   }
+  environment {
+    mvnHome = 'tool \'maven jenkins\''
+  }
 }
